@@ -16,7 +16,7 @@ class CreateNewTaskTest < FeatureTest
     fill_in 'task[description]', :with => 'new description'
     click_button 'update task'
     visit '/tasks'
-
+    
     assert page.has_content? 'new title'
   end
 end
