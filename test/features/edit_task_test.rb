@@ -9,14 +9,15 @@ class CreateNewTaskTest < FeatureTest
   end
 
   def test_user_can_edit_task
-    create_task
+    TaskManager.create(title: "title",
+                       description: "tonight")
 
     visit '/tasks/1/edit'
     fill_in 'task[title]', :with => 'new title'
     fill_in 'task[description]', :with => 'new description'
     click_button 'update task'
     visit '/tasks'
-    
+
     assert page.has_content? 'new title'
   end
 end
