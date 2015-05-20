@@ -1,8 +1,5 @@
 ---
 tasks:
-- id: 1
-  title: Learn Sinatra
-  description: Easy as 1-2-3
 - id: 2
   title: Create Task Manager
   description: No problemo!
@@ -15,4 +12,7 @@ tasks:
 - id: 5
   title: Code
   description: 24/7
-total: 7
+- id: 10
+  title: Make fake task
+  description: 'meta '
+total: 10

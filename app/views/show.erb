@@ -1,5 +1,14 @@
+<div class="front-page">
+
 <a href="/tasks">Task Index</a>
 
 <h1><%= @task.title %></h1>
 
 <p><%= @task.description %></p>
+</div>
+<span class="delete">
+  <form class="pure-form" action="/tasks/<%= @task.id %>" method="POST">
+    <input type="hidden" value="DELETE" name="_method">
+    <input class="pure-input-rounded" type="submit" value="delete">
+  </form>
+</span>

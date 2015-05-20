@@ -1,0 +1,14 @@
+<div class="centered">
+  <h1>Edit Task</h1>
+
+<form class="pure-form" action="/tasks/<%= @task.id %>" method="POST">
+  <input type="hidden" name="_method" value="PUT">
+  <input class="pure-form" type="text" name="task[title]" value="<%=@task.title%>">
+  <textarea class="pure-form" name="task[description]"> <%= @task.description%> </textarea>
+  <input type="submit" value="update task">
+</form>
+
+<div id="footer">
+  Check it out on <a href="https://github.com/kravinskylev/task_manager">GitHub</a>
+</div>
+</div>

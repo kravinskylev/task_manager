@@ -112,3 +112,17 @@ body {
   border-width: medium;
   padding:5px;
 }
+
+.edit {
+  width:2%;
+}
+
+.centered {
+  text-align: center;
+}
+
+.delete {
+  font-size:2vh;
+  text-align: center;
+  background-color: #8EAEF5;
+}
