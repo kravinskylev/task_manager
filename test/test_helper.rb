@@ -6,12 +6,6 @@ require 'minitest/pride'
 require 'capybara'
 require 'tilt/erb'
 
-class Minitest::Test
-  def teardown
-    TaskManager.delete_all
-  end
-end
-
 Capybara.app = TaskManagerApp
 
 class FeatureTest < Minitest::Test

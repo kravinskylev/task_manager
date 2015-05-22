@@ -12,7 +12,7 @@ class CreateNewTaskTest < FeatureTest
     TaskManager.create(title: "title",
                        description: "tonight")
 
-    visit '/tasks/1/edit'
+    visit "/tasks/#{TaskManager.all.last.id}/edit"
     fill_in 'task[title]', :with => 'new title'
     fill_in 'task[description]', :with => 'new description'
     click_button 'update task'
